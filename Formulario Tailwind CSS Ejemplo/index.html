@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <form 
+   class="mb-0 space-y-0"
+    enctype="application/x-www-form-urlencoded" 
+    action="/noexiste.html">
+
+    <p>
+            <label> nombre
+                <input type="text" name="nombre_cliente" required class="w-200 border 
+border-gray-800px">
+            </label>
+        </p>
+
+        <p>
+            <label> telefono
+                <input type="tel" name="numero_telefono" required class="w-200 border 
+                border-gray-800px">
+            </label>
+
+        </p>
+
+
+        <p>
+            <label> Email
+                <input type="email" name="direccion_correo" class="w-200 border 
+                border-gray-800px">
+            </label>
+        </p>
+
+        <fieldset>
+            <legend>Que taxi quiere?</legend>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="car" class="w-200 border 
+                    border-gray-800px">
+                    carrito
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="van" class="w-200 border 
+                    border-gray-800px">
+                    suv
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="tucktuck" class="w-200 border 
+                    border-gray-800px">
+                    Tuck Tuck
+                </label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Extras</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="baby" class="w-200 border 
+                    border-gray-800px">
+                    silla de bebe
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="musica" class="w-200 border 
+                    border-gray-800px">
+                    No regueton
+                </label>
+            </p>
+        </fieldset>
+
+        <p>
+            <Label>Dia y Hora?
+                <input type="datetime-local" name="fecha_hora" required >
+            </Label>
+        </p>
+
+        <p>
+            <label>lugar para recoger
+                <select id="pickup_place" name="pickup_place">class="w-200 border 
+                    <option value="" selected="">Seleccione Opcion</option>
+                    <Option value="Oficina">Oficina</Option>
+                    <Option value="Feria"> La Feria</Option>
+                    <option value="La_U"> La universidad </option>
+                    <option value="No_se ">Le digo al rato</option>
+                    
+                </select>
+            </label>
+        </p>
+
+        <p>
+            <label>Dejar en:
+                <Input type="text" name="dejar_en" required list="destino" class="w-200 border 
+                border-gray-800px">
+            </label>
+
+            <datalist id="destino">
+                <option value="aeropuerto"></option>
+                <option value="Playa"></option>
+                <option value="Biblioteca"></option>
+            </datalist>
+        </p>
+        <p>
+            <label> Instrucciones especiales</label>
+            <textarea name="comentarios" maxlength="500"></textarea>
+        </p>
+
+        <p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 rounded" >Hacer cita</button>
+        </p>
+
+    </form>
+</body>
+
+</html>
